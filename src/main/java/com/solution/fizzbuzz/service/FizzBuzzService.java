@@ -35,7 +35,8 @@ public class FizzBuzzService {
 
     }
 
-    public String fizzBuzz(Integer number) {
-        return processor.run(number);
+    public String fizzBuzz(Integer number) throws IllegalArgumentException{
+        if(number>0) return processor.run(number);
+        throw new IllegalArgumentException();
     }
 }
