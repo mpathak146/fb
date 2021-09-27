@@ -23,6 +23,6 @@ public class ActionProcessor {
                 .parallelStream()
                 .map(a -> a.apply(rollNum))
                 .collect(Collectors.joining());
-        return actString == "" ? String.valueOf(rollNum) : actString;
+        return actString.equals("") ? String.valueOf(rollNum) : actString;
     }
 }
